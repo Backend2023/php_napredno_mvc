@@ -26,7 +26,6 @@ class Quiz
         return $quiz;
     }
 
-
     public static function update(self $quiz): self
     {
         $title = $quiz->title;

@@ -18,6 +18,8 @@
             ?>
 
               <div class="question_group question__card" data-order="<?php echo $counter; ?>">
+
+
                   <label class="input__column">
                       Pitanje:
                       <input type="text" name="questions[<?php echo $counter; ?>][question]" value="<?php echo $question->question; ?>">
@@ -34,10 +36,9 @@
                                                 } ?> name="questions[<?php echo $counter; ?>][correctAnswer]" required value="<?php echo $k; ?>" />
                           <input type="text" required name="questions[<?php echo $counter; ?>][answers][<?php echo $k; ?>]" value="<?php echo $v; ?>">
                       </div>
-
                   <?php
-
-                    } ?>
+                    }
+                    ?>
 
               </div>
               <input type="hidden" name="questions[<?php echo $counter; ?>][id]" value="<?php echo $question->id; ?>">
@@ -128,7 +129,6 @@
             </div>`
 
           counter++
-          console.log(counter)
           questions.appendChild(html.firstChild)
 
 

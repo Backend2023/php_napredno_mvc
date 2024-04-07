@@ -22,6 +22,7 @@ class Question
         $stmt = $db->prepare("INSERT INTO question (question, answers, correct_answer, quiz_id) VALUES (?, ?, ?, ?)");
         $stmt->bind_param('sssi', $question, $answers, $correctAnswer, $quizId);
         $res = $stmt->execute();
+
         if ($res) {
             $new->id = $db->insert_id;
         }
@@ -47,14 +48,14 @@ class Question
     {
         $db = Database::get();
         $res = $db->query("SELECT * FROM question WHERE quiz_id=$id");
-        $arr = $res->fetch_all(MYSQLI_ASSOC);
-        $objArray = [];
+        $resArr = $res->fetch_all(MYSQLI_ASSOC);
+        $questionsArray = [];
 
-        foreach ($arr as $o) {
-            $objArray[] = new self($o['question'], json_decode($o['answers'], true), $o['correct_answer'], $o['quiz_id'], $o['id']);
+        foreach ($resArr as $question) {
+            $questionsArray[] = new self($question['question'], json_decode($question['answers'], true), $question['correct_answer'], $question['quiz_id'], $question['id']);
         }
 
-        return $objArray;
+        return $questionsArray;
     }
 
     public static function storeAll(array $questionsArray): array
