@@ -45,6 +45,20 @@ class QuizController
         Router::redirect('/quiz/' . $quiz->id, 'Uspješno ste kreirali novi kviz.');
     }
 
+    static function delete($id)
+    {
+        echo "<h1>S</h1>";
+        $res = Quiz::deleteById($id);
+        print_r($res);
+        if ($res) {
+            $message = "Uspješno ste obrisali kviz s ID=$id.";
+        } else {
+            $message = "Dogodila se greška prilikom brisanja quiz s ID=$id.";
+        }
+
+        Router::redirect("/", $message);
+    }
+
     static function editForm($id)
     {
         $questions = Question::getAllByQuizId($id);

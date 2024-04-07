@@ -44,6 +44,14 @@ class Quiz
         return $quiz;
     }
 
+    public static function deleteById(int $id): bool
+    {
+
+        $db = Database::get();
+        $res = $db->query("DELETE FROM quiz WHERE id=$id");
+        return $res;
+    }
+
 
     public static function getAll(): array
     {

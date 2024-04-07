@@ -42,3 +42,4 @@ Router::get('/quiz/:id', [QuizController::class, 'show']);
 
 Router::post('/quiz/create', [QuizController::class, 'create']);
 Router::post('/quiz/edit/:id', [QuizController::class, 'edit']);
+Router::post('/quiz/delete/:id', [QuizController::class, 'delete']);
