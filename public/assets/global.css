@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.header-wrapper {
+    padding: 15px;
+    background-color: springgreen;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-wrapper {
+    padding: 15px;
+    background-color: springgreen;
+}
+
+.header__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.header__link-home {
+    font-family: fantasy;
+}
+
+.header__link-create {
+    padding: 5px 10px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.header__link>* {
+    width: 100%;
+}
+
+.header__link__icon {
+    max-width: 30px;
+}
+
+.message-wrapper {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1024px;
+    background-color: gold;
+    border: 3px solid black;
+    z-index: 99;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.message__close {
+    max-width: 30px;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    min-height: 80vh;
+}
+
+.title {
+    margin: 1.35rem 0;
+}
+
+.description {
+    margin: 1rem 0;
+}
+
+.list-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    width: calc(33% - 2rem);
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 150px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.card__title {
+    margin-bottom: 0.5rem;
+}
+
+.card__description {}
+
+.question__card {
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.question__card legend {
+    background-color: gold;
+    padding: 5px 10px;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.submit {
+    background-color: springgreen;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+
+.submit__icon {
+    max-width: 20px;
+}
+
+.add {
+    background-color: gold;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+
+
+.add__icon {
+    max-width: 20px;
+}
+
+.edit {
+    background-color: gold;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+
+
+.edit__icon {
+    max-width: 20px;
+}
+
+
+.question__card label {
+    width: 100%;
+    display: block;
+
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.quiz__create {
+    cursor: unset;
+}
+
+.question__answer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.quiz__form .question__card label:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+
+
+.quiz__result {
+    background-color: springgreen;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+
+.quiz__retake {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: springgreen;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.quiz__retake>* {
+    width: 100%;
+}
+
+.quiz__retake__icon {
+    max-width: 20px;
+}
+
+.input__column {
+    display: flex;
+    flex-flow: column;
+}
+
+.quiz__create input[type="text"] {
+    padding: 10px 10px;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.quiz__create textarea {
+    padding: 10px 10px;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.quiz__create .question__card label {
+    padding: 5px 0px;
+}
+
+.question__answer {
+    display: flex;
+    gap: 10px;
+    margin: 0.5rem 0;
+}
+
+.delete {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.delete__icon {
+    width: 20px;
+}
