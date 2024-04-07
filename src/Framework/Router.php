@@ -40,6 +40,7 @@ class Router
                 return;
             }
         }
+        self::redirect("/404");
     }
 
     /**

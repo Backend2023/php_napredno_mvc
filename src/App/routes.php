@@ -39,6 +39,10 @@ Router::get('/quiz/create', [QuizController::class, 'createForm']);
 Router::get('/quiz/edit/:id', [QuizController::class, 'editForm']);
 Router::get('/quiz/result/:id', [QuizController::class, 'result']);
 Router::get('/quiz/:id', [QuizController::class, 'show']);
+Router::get('/404', function () {
+    View::render('404');
+});
+
 
 Router::post('/quiz/create', [QuizController::class, 'create']);
 Router::post('/quiz/edit/:id', [QuizController::class, 'edit']);
