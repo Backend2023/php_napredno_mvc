@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Framework\Database;
+use Framework\Router;
 
 class Quiz
 {
@@ -71,6 +72,9 @@ class Quiz
         $db = Database::get();
         $res = $db->query("SELECT * FROM quiz WHERE id=$id");
         $data = $res->fetch_assoc();
+        if (is_null($data)) {
+            Router::redirect("/404");
+        }
         return new self($data['title'], $data['description'], $data['id']);
     }
 }
