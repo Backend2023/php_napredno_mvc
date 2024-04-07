@@ -5,7 +5,7 @@ Jednostavni MVC
 
 ## Kako pokrenuti aplikaciju lokalno
 
-Koliraj repo
+Kloniraj repo
 
 ```bash
   git clone https://github.com/erikfakin/php_napredno_mvc.git
@@ -26,9 +26,9 @@ Instaliraj potrebne dependencies
 Pokreni sql skriptu za kreiranje i seedanje baze podataka
 
 ```bash
-  mvcquiz.sql -> preko mysql cli-a: source file_name.sql 
+  mvcquiz.sql -> preko mysql cli-a: source mvcquiz.sql 
   ili
-  otvori mvcquiz.sql u HeidiSQL ili slicno
+  otvori mvcquiz.sql u HeidiSQL ili slično
 ```
 
 Pokreni PHP server iz public foldera

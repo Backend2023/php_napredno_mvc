@@ -30,10 +30,6 @@ Router::get('/test/:parametar', function ($parametar) {
     echo "<h1>$parametar</h1>";
 });
 
-
-
-
-
 Router::get('/', [QuizController::class, 'index']);
 Router::get('/quiz/create', [QuizController::class, 'createForm']);
 Router::get('/quiz/edit/:id', [QuizController::class, 'editForm']);
@@ -42,7 +38,6 @@ Router::get('/quiz/:id', [QuizController::class, 'show']);
 Router::get('/404', function () {
     View::render('404');
 });
-
 
 Router::post('/quiz/create', [QuizController::class, 'create']);
 Router::post('/quiz/edit/:id', [QuizController::class, 'edit']);
