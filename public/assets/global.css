@@ -317,3 +317,16 @@ body {
 .question__delete__icon {
     width: 20px;
 }
+
+.selected.wrong {
+    background-color: #FF3366;
+
+}
+
+.selected.correct {
+    background-color: springgreen;
+}
+
+.correct {
+    background-color: #b5ebe0;
+}

@@ -1,18 +1,3 @@
-<style>
-    .selected.wrong {
-        background-color: #FF3366;
-
-    }
-
-    .selected.correct {
-        background-color: springgreen;
-    }
-
-    .correct {
-        background-color: #b5ebe0;
-    }
-</style>
-
 <h1 class="title"><?php echo $quiz->title; ?></h1>
 <p class="description"><?php echo $quiz->description; ?></p>
 <div class="quiz__result question__card">
