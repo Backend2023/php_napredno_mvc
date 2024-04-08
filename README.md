@@ -20,7 +20,7 @@ Otvori folder projekta
 Instaliraj potrebne dependencies
 
 ```bash
-  composer update
+  composer install
 ```
 
 Pokreni sql skriptu za kreiranje i seedanje baze podataka
