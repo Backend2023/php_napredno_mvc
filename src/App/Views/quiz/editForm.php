@@ -1,10 +1,10 @@
   <form class="quiz__create" method="post">
       <div class="question__card">
-          <label>
+          <label lass="input__column">
               Naslov quiza
               <input type="text" name="title" value="<?php echo $quiz->title; ?>">
           </label>
-          <label>
+          <label lass="input__column">
               Opis quiza
               <textarea name="description"><?php echo $quiz->description; ?></textarea>
           </label>
